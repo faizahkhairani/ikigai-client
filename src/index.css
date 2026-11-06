@@ -1,0 +1,285 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "@fontsource-variable/playfair-display";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: "Plus Jakarta Sans Variable", sans-serif;
+
+  /* Shadcn semantic colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Charts */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Sidebar */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Pastel custom colors */
+  --color-pastel-pink: #fdf2f8;
+  --color-pastel-pink-soft: #fce7f1;
+  --color-pastel-pink-text: #db2777;
+  --color-pastel-pink-dark: #ec4899;
+
+  --color-pastel-blue: #eff6ff;
+  --color-pastel-blue-soft: #dbeafe;
+  --color-pastel-blue-text: #2563eb;
+  --color-pastel-blue-dark: #3b82f6;
+
+  --color-pastel-purple: #f5f3ff;
+  --color-pastel-purple-soft: #ede9fe;
+  --color-pastel-purple-text: #7c3aed;
+
+  --color-pastel-amber: #fffbeb;
+  --color-pastel-amber-soft: #fef3c7;
+  --color-pastel-amber-text: #d97706;
+
+  --color-pastel-mint: #ecfdf5;
+  --color-pastel-mint-text: #059669;
+  --color-pastel-mint-soft: #d1fae5;
+
+  --color-pastel-bg: #f8fafc;
+
+  /* Radius */
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+
+:root {
+  --radius: 0.625rem;
+
+  --background: #f8fafc;
+  --foreground: #334155;
+
+  --card: #ffffff;
+  --card-foreground: #334155;
+
+  --popover: #ffffff;
+  --popover-foreground: #334155;
+
+  /* Primary = pastel blue */
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+
+  /* Secondary = soft pink */
+  --secondary: #fce7f1;
+  --secondary-foreground: #be185d;
+
+  /* Muted */
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+
+  /* Accent */
+  --accent: #eff6ff;
+  --accent-foreground: #2563eb;
+
+  /* Destructive */
+  --destructive: #ef4444;
+
+  /* Borders */
+  --border: #e2e8f0;
+  --input: #f1f5f9;
+  --ring: #93c5fd;
+
+  /* Charts */
+  --chart-1: #3b82f6;
+  --chart-2: #ec4899;
+  --chart-3: #7c3aed;
+  --chart-4: #d97706;
+  --chart-5: #059669;
+
+  /* Sidebar */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #334155;
+
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #ffffff;
+
+  --sidebar-accent: #eff6ff;
+  --sidebar-accent-foreground: #2563eb;
+
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #93c5fd;
+}
+
+
+.dark {
+  --background: #17151a;
+  --foreground: #f8fafc;
+
+  --card: #211e24;
+  --card-foreground: #f8fafc;
+
+  --popover: #211e24;
+  --popover-foreground: #f8fafc;
+
+  /* Blue tetap jadi primary */
+  --primary: #60a5fa;
+  --primary-foreground: #172033;
+
+  /* Pink sebagai secondary */
+  --secondary: #4a2638;
+  --secondary-foreground: #f9a8d4;
+
+  --muted: #29262d;
+  --muted-foreground: #a8a3ad;
+
+  --accent: #26344a;
+  --accent-foreground: #93c5fd;
+
+  --destructive: #f87171;
+
+  --border: #39353d;
+  --input: #39353d;
+  --ring: #60a5fa;
+
+  /* Charts */
+  --chart-1: #60a5fa;
+  --chart-2: #f472b6;
+  --chart-3: #a78bfa;
+  --chart-4: #fbbf24;
+  --chart-5: #34d399;
+
+  /* Sidebar */
+  --sidebar: #1d1a20;
+  --sidebar-foreground: #f8fafc;
+
+  --sidebar-primary: #60a5fa;
+  --sidebar-primary-foreground: #172033;
+
+  --sidebar-accent: #26344a;
+  --sidebar-accent-foreground: #93c5fd;
+
+  --sidebar-border: #39353d;
+  --sidebar-ring: #60a5fa;
+}
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #211e24;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4a4650;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #5d5864;
+}
+
+
+.nav-item-active {
+  background: linear-gradient(
+    135deg,
+    #eff6ff 0%,
+    #fdf2f8 100%
+  );
+
+  color: #2563eb;
+  border-right: 4px solid #3b82f6;
+  font-weight: 700;
+}
+
+.dark .nav-item-active {
+  background: linear-gradient(
+    135deg,
+    #26344a 0%,
+    #4a2638 100%
+  );
+
+  color: #93c5fd;
+  border-right-color: #60a5fa;
+}
+
+.status-stepper-line {
+  position: absolute;
+  left: 19px;
+  top: 24px;
+  bottom: 24px;
+  width: 3px;
+  background: #e2e8f0;
+  z-index: 0;
+}
+
+.dark .status-stepper-line {
+  background: #39353d;
+}
